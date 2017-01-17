@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_TpXI4NwSEeagZ7rf9bVcvg" targetNamespace="http://tns.tibco.com/bw/composite/Scenario3Dev.module" name="Scenario3Dev.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_DhLu8NwTEeagZ7rf9bVcvg" name="Math-Add" promote="ComponentProcess/Math-Add">
+    <sca:interface.wsdl xmi:id="_DhTqwNwTEeagZ7rf9bVcvg" interface="http://xmlns.example.com/20170116123628PLT#wsdl.interface(Math-Add)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_DhcNoNwTEeagZ7rf9bVcvg" name="RestService" path="/Math/Add" docBasePath="http://localhost:7777/Scenario3Dev.module" docResourcePath="Math" basePath="/" connector="scenario3dev.module.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/Scenario3.json">
+      <operation xmi:id="_DhiUQNwTEeagZ7rf9bVcvg" operationName="get" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_Di0tsNwTEeagZ7rf9bVcvg">
+          <parameterMapping xmi:id="_Di1UwNwTEeagZ7rf9bVcvg" parameterName="param1" parameterType="Query" dataType="integer#int32" required="true" description=""/>
+          <parameterMapping xmi:id="_Di1UwdwTEeagZ7rf9bVcvg" parameterName="param2" parameterType="Query" dataType="integer#int32" required="true" description=""/>
+          <parameterMapping xmi:id="_Di1UwtwTEeagZ7rf9bVcvg" parameterName="symbols" parameterType="Query" dataType="string" required="true" description=""/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+      </operation>
+      <parameters xmi:id="_Di0GoNwTEeagZ7rf9bVcvg"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_DhiUQdwTEeagZ7rf9bVcvg" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_UcwUsNwSEeagZ7rf9bVcvg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Uc-XINwSEeagZ7rf9bVcvg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_UdDPoNwSEeagZ7rf9bVcvg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_UdIvMNwSEeagZ7rf9bVcvg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_UdZN4NwSEeagZ7rf9bVcvg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_UdhwwNwSEeagZ7rf9bVcvg" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_UdrhwNwSEeagZ7rf9bVcvg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_UC0xwNwSEeagZ7rf9bVcvg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_UC1_4NwSEeagZ7rf9bVcvg" processName="scenario3dev.module.Process"/>
+    <sca:service xmi:id="_DhGPYNwTEeagZ7rf9bVcvg" name="Math-Add">
+      <sca:interface.wsdl xmi:id="_DhHdgNwTEeagZ7rf9bVcvg" interface="http://xmlns.example.com/20170116123628PLT#wsdl.interface(Math-Add)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
